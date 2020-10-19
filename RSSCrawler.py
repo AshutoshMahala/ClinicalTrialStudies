@@ -1,8 +1,8 @@
 import feedparser
+import sys
 
 
 class RSSCrawler:
-
     # Internal variable and feed query param map
     FEED_KEY_PARAMS = {"name": "cond", "count": "count", "days": "rcv_d"}
 
@@ -69,5 +69,12 @@ class RSSCrawler:
 
 if __name__ == "__main__":
     crawler = RSSCrawler("https://clinicaltrials.gov/ct2/results/rss.xml")
-    ans = crawler.was_active_in_days("Alzheimer Disease", 140)
-    print(f"was it active? {ans}")
+    if len(sys.argv) < 3:
+        print('please invoke as show python "Disease Name" 34 \nwhere 34 is number of days inactive')
+    else:
+        try:
+            days = int(sys.argv[2])
+            ans = crawler.was_active_in_days(sys.argv[1], days)
+            print(f"was {sys.argv[1]} active in last {days}? {ans}")
+        except ValueError:
+            print('unable to parse int, please provide correct number, correct input e.g \n python "Disease Name" 34')

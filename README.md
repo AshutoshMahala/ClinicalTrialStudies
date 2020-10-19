@@ -14,6 +14,8 @@ RSS feeds from ClinicalTrials.gov as an example
 *	Alzheimer Disease https://clinicaltrials.gov/ct2/results/rss.xml?rcv_d=30&cond=Alzheimer+Disease&count=10000
  
 
+[![Testing on Postman](https://files.realpython.com/media/flask-nginx-gunicorn-architecture.012eb1c10f5e.jpg)](https://youtu.be/AF76jtQVJ8o)
+
 ## Requirements:
 In order to run the RSSCrawler
 1. intall Python 3

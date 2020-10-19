@@ -43,7 +43,6 @@ class RSSCrawler:
             if not param[key]:
                 continue
             words = str(param[key]).split()
-            print(words)
             query_params.append(f"{key}={'+'.join(words)}")
         return self.base_url + "?" + "&".join(query_params)
 
@@ -62,7 +61,6 @@ class RSSCrawler:
         params = {RSSCrawler.FEED_KEY_PARAMS["name"]: name, RSSCrawler.FEED_KEY_PARAMS["days"]: str(day_num),
                   "count": str(count)}
         url = self.generate_url(params)
-        print(url)
         return RSSCrawler.call_feed(url)
 
     def was_active_in_days(self, disease_name: str, day_num: int):
@@ -72,4 +70,4 @@ class RSSCrawler:
 if __name__ == "__main__":
     crawler = RSSCrawler("https://clinicaltrials.gov/ct2/results/rss.xml")
     ans = crawler.was_active_in_days("Alzheimer Disease", 140)
-    print(ans)
+    print(f"was it active? {ans}")

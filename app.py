@@ -21,6 +21,7 @@ def was_it_active():
     name = request.args.get('name')
     print(name)
     days_str = request.args.get('daysinactive')
+    print(days_str)
     if not days_str:
         return jsonify(message="Invalid number of days, please provide days with number of days greater than 0"), 400
     days = int(days_str)

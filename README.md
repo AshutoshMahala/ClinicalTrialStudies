@@ -1,6 +1,6 @@
-# ClinicalTrialStudies
 ![Was It Active](https://www.flaticon.com/svg/static/icons/png/128/3017/3017586.png) 
 
+# ClinicalTrialStudies
 This API provides data directly from https://clinicaltrials.gov/
 It checks if the disease was active in last n days
 
@@ -32,22 +32,22 @@ In order to run test cases
 ```
 pip3 install pytest
 ```
+
 ## How to Run
 1. To Run RSSCrawler provide 2 commandline argument when starting 
- 1. Disease Name
- 1. Number of Inactive days from now
- ```
- python3 RSSCrawler covid19 5
- ```
+  1. Disease Name
+  1. Number of Inactive days from now
+  ```
+  python3 RSSCrawler covid19 5
+  ```
 1. To Run Test case, run below commands
- ```
- pytest
- ```
+  ```
+  pytest
+  ```
 1. To Run flask server, run below command
- ```
- flask run
- ```
+  ```
+  flask run
+  ```
 
 ### Attributions:
-
 Icons made by https://www.flaticon.com/authors/smalllikeart at https://www.flaticon.com/

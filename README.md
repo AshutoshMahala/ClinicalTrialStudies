@@ -32,7 +32,22 @@ In order to run test cases
 ```
 pip3 install pytest
 ```
+## How to Run
+1. To Run RSSCrawler provide 2 commandline argument when starting 
+ 1. Disease Name
+ 1. Number of Inactive days from now
+ ```
+ python3 RSSCrawler covid19 5
+ ```
+1. To Run Test case, run below commands
+ ```
+ pytest
+ ```
+1. To Run flask server, run below command
+ ```
+ flask run
+ ```
 
-Contributions:
+### Attributions:
 
 Icons made by https://www.flaticon.com/authors/smalllikeart at https://www.flaticon.com/
